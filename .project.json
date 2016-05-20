@@ -30,8 +30,49 @@
   "basevalidator": {
     "services": {
       "xml": "fioriXmlAnalysis",
-      "js": "fioriJsValidator"
-    }
+      "js": "jsValidator"
+    },
+    "validators": [
+      {
+        "validatorID": "fioriJsValidator",
+        "configuration": {
+          "rules": {
+            "linebreak-style": [
+              0,
+              "unix"
+            ]
+          },
+          "additionalRuleMetadata": {
+            "MainAnsp.controller": {
+              "severity": "w",
+              "category": "Best Practice"
+            },
+            "models": {
+              "severity": "w",
+              "category": "Best Practice"
+            },
+            "Component": {
+              "severity": "w",
+              "category": "Best Practice"
+            },
+            "CustomerFormat": {
+              "severity": "w",
+              "category": "Best Practice"
+            }
+          }
+        },
+        "customRulesPath": "/Anspruchsverwaltung"
+      },
+      {
+        "validatorID": "jsValidator",
+        "configuration": {
+          "eslintConfig": {
+            "rules": {}
+          },
+          "rulesExt": {}
+        }
+      }
+    ]
   },
   "codeCheckingTriggers": {
     "notifyBeforePush": true,

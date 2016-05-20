@@ -35,8 +35,8 @@
 					<NavContainer id="pageContainer" width="100%" height="100%" class="navContainerControl sapUiSmallMarginBottom">
 						<core:Fragment fragmentName="com.convista.view.Vertraege_flex" type="XML"/>
 						<core:Fragment fragmentName="com.convista.view.Sollstellungen_flex" type="XML"/>
-						<core:Fragment fragmentName="com.convista.view.OffenePosten_flex" type="XML"/> 
-					</NavContainer>
+						<core:Fragment fragmentName="com.convista.view.OffenePosten_flex" type="XML"/>  
+					</NavContainer> 
 				</tnt:mainContents>
 			</tnt:ToolPage>
 			<footer>
