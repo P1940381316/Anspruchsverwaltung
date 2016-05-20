@@ -1,0 +1,72 @@
+<core:FragmentDefinition xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:fm="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<Panel id='settingsPanel' class="panelStyle" expandable="true" expanded="false" headerText="{i18n>setting}" width="auto">
+		<headerToolbar>
+			<Toolbar id="toolbarAuswahl1" height="3rem">
+				<ToolbarSpacer/>
+				<!--	<Button icon="sap-icon://refresh" tooltip="{i18n>refresh}" press="onRefresh"/> -->
+				<PullToRefresh id="pullToRefresh" refresh="onRefresh"/>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<HBox class='settingsHBox' id="selectBox1">
+				<VBox class='settingsBox' width="24%">
+					<Label text="Gesellschaft" id="label01" required="false" design="Bold" class='settingsLabel' labelFor="input01"/>
+					<Select xmlns:sap.ui.core="sap.ui.core" selectedKey="item1" selectedItem="item10" selectedItemId="item10" id="gesellschaft" width="90%">
+						<items>
+							<sap.ui.core:ListItem text="ConVista Deutschland" key="item1" id="item10"/>
+							<sap.ui.core:ListItem text="ConVista Spain" key="item2" id="item11"/>
+							<sap.ui.core:ListItem text="ConVista India" key="item3" id="item12"/>
+							<sap.ui.core:ListItem text="...." key="item4" id="item14"/>
+						</items>
+					</Select>
+				</VBox>
+				<VBox class='settingsBox' width="20%">
+					<Label text="Buchungskreis" id="label02" required="false" design="Bold" class='settingsLabel' labelFor="buchungskreis"/>
+					<Select xmlns:sap.ui.core="sap.ui.core" selectedKey="item1" selectedItem="item101" selectedItemId="item101" id="buchungskreis">
+						<items>
+							<sap.ui.core:ListItem text="CC01" key="item1" id="item101"/>
+							<sap.ui.core:ListItem text="DE02" key="item2" id="item111"/>
+							<sap.ui.core:ListItem text="SP05" key="item3" id="item121"/>
+							<sap.ui.core:ListItem text="...." key="item4" id="item141"/>
+						</items>
+					</Select>
+				</VBox>
+				<VBox class='settingsBox'>
+					<Label text="von: Monat" id="label04" design="Bold" class="settingsLabel"/>
+					<Select xmlns:sap.ui.core="sap.ui.core" items="{path: '/monthSelect'}" id="vonMonth">
+						<items>
+							<sap.ui.core:ListItem text="{month}" key="{key}"/>
+						</items>
+					</Select>
+				</VBox>
+				<VBox width="3px"/>
+				<VBox class='settingsBox' width="15%">
+					<Label text="Jahr" id="label07" design="Bold" class="settingsLabel"/>
+					<Select xmlns:sap.ui.core="sap.ui.core" items="{path: '/yearSelect'}" id="vonYear">
+						<items>
+							<sap.ui.core:ListItem text="{year}" key="{key}"/>
+						</items>
+					</Select>
+				</VBox>
+				<VBox class='settingsBox'>
+					<Label text="bis: Monat" id="label09" design="Bold" class="settingsLabel"/>
+					<Select xmlns:sap.ui.core="sap.ui.core" items="{path: '/monthSelect'}" id="bisMonth">
+						<items>
+							<sap.ui.core:ListItem text="{month}" key="{key}"/>
+						</items>
+					</Select>
+				</VBox>
+				<VBox width="3px"/>
+				<VBox class='settingsBox' width="15%">
+					<Label text="Jahr" id="label017" design="Bold" class="settingsLabel"/>
+					<Select xmlns:sap.ui.core="sap.ui.core" items="{path: '/yearSelect'}" id="bisYear">
+						<items>
+							<sap.ui.core:ListItem text="{year}" key="{key}"/>
+						</items>
+					</Select>
+				</VBox>
+			</HBox>
+		</content>
+	</Panel>
+</core:FragmentDefinition>

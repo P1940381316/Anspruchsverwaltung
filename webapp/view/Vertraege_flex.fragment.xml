@@ -1,0 +1,44 @@
+<core:FragmentDefinition xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:ui.com="sap.suite.ui.commons" xmlns:fm="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:viz.data="sap.viz.ui5.data"
+	xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds">
+	<Page id="page1" title="No" class="sapUiFioriObjectPage" showHeader="false" showFooter="false">
+		<content>
+			<l:FixFlex id="FixFlexVertraege">
+				<l:fixContent>
+					<Panel id="panelKompl" class="panelStyle" headerText="Verträge" expanded="true" width="auto">
+						<HBox class="settingsHBox ">
+							<VBox class="vboxKPI" width="20%">
+								<ObjectIdentifier title="Sollstellungen Total" titleActive="false"/>
+								<ObjectNumber number="{path: '/Umsatz/incomingCount' , formatter: '.number1formater' }"/>
+							</VBox>
+							<VBox width="10px"></VBox>
+							<VBox class="vboxKPI" width="20%">
+								<ObjectIdentifier title="Sollstellungen Prämien" titleActive="false"/>
+								<ObjectNumber class="sapUiSmallMarginBottom" number="{path:'/Umsatz/valueIncoming' , formatter: '.number1formater' }" unit="EURO"
+									state="Success"/>
+							</VBox>
+							<VBox width="10px"></VBox>
+							<VBox class="vboxKPI" width="20%">
+								<ObjectIdentifier title="Sollstellungen Nebenforderungen" titleActive="false"/>
+								<ObjectNumber class="sapUiSmallMarginBottom" number="{path:'/Umsatz/valueIncoming' , formatter: '.number1formater' }" unit="EURO"
+									state="Success"/>
+							</VBox>
+						</HBox>
+					</Panel>
+				</l:fixContent>
+				<l:flexContent>
+					<ui.com:ChartContainer id="idChartContainer" showFullScreen="true" showPersonalization="false" autoAdjustHeight="true" showLegend="true"
+						contentChange="attachContentChange">
+						<ui.com:dimensionSelectors>
+							<Select id="idoSelectKlaer" change="handleSelectionChangeContract">
+								<core:Item id="itemvt0" key="0" text="Aktuell"/>
+								<core:Item id="itemvt1" key="1" text="Vorjahr"/>
+								<core:Item id="itemvt2" key="2" text="Vorperiode"/>
+							</Select>
+						</ui.com:dimensionSelectors>
+					</ui.com:ChartContainer>
+				</l:flexContent>
+			</l:FixFlex>
+		</content>
+	</Page>
+</core:FragmentDefinition>

@@ -1,0 +1,54 @@
+{
+  "projectType": [
+    "sap.watt.uitools.ide.fiori",
+    "sap.watt.uitools.ide.web"
+  ],
+  "build": {
+    "targetFolder": "dist",
+    "sourceFolder": "webapp",
+    "buildRequired": true
+  },
+  "generation": [
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationProject",
+      "templateVersion": "1.32.0",
+      "dateTimeStamp": "Thu, 19 May 2016 09:42:47 GMT"
+    },
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationComponent",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Thu, 19 May 2016 10:52:41 GMT"
+    }
+  ],
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "basevalidator": {
+    "services": {
+      "xml": "fioriXmlAnalysis",
+      "js": "fioriJsValidator"
+    }
+  },
+  "codeCheckingTriggers": {
+    "notifyBeforePush": true,
+    "notifyBeforePushLevel": "Error",
+    "blockPush": false,
+    "blockPushLevel": "Error"
+  },
+  "hcpdeploy": {
+    "account": "p1940381316trial",
+    "name": "anspruchsverwaltung",
+    "lastVersionWeTriedToDeploy": "1.0.0"
+  },
+  "mockpreview": {
+    "mockUri": "",
+    "metadataFilePath": "",
+    "mockRequestsFilePath": "",
+    "loadJSONFiles": true,
+    "loadCustomRequests": false
+  }
+}

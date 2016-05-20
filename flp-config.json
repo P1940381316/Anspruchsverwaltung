@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "Anspruchsverwaltung",
+        "description": "Anspruchsverwaltung",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/webapp",
+        "appUrl": "#Anspruchsverwaltung-Display",
+        "navigationComponentName": "com.convista",
+        "intentSemanticObject": "Anspruchsverwaltung",
+        "intentAction": "Display",
+        "html5ApplicationName": "anspruchsverwaltung",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "62d22fc0-b64d-4714-a9bc-a7ee4eddb93e"
+        ],
+        "contentPackages": [
+            "5181caa0-2d18-46b8-9c5a-1d9297ab1835"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Anspruchsverwaltung",
+        "subtitle": "3 Kennzahlen",
+        "searchKeywords": "Anspruchsverwaltung,3 Kennzahlen",
+        "displayIconUrl": "sap-icon://request",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

@@ -1,0 +1,70 @@
+{
+	"OpenItemsByCC": {
+		"Aktuell": [{
+			"KPI": "Kennzahlen",
+			"OpenItemsTotal": 27345876.30,
+			"OpenItemsBonus": 10000000,
+			"OpenItemsAllowance": 17345876.25,
+			"aoutstandingQuote": 12.3
+		}],
+		"Vorjahr": [{
+			"KPI": "Aktuell",
+			"OpenItemsTotal": 27345876.30,
+			"OpenItemsBonus": 10000000,
+			"OpenItemsAllowance": 17345876.25,
+			"aoutstandingQuote": 12.3
+		}, {
+			"KPI": "Vorjahr",
+			"OpenItemsTotal": 23345876.30,
+			"OpenItemsBonus": 12000000,
+			"OpenItemsAllowance": 15345876.25,
+			"aoutstandingQuote": 13.3
+
+		}],
+		"Vorperiode": [{
+			"KPI": "Aktuell",
+			"OpenItemsTotal": 24345876.30,
+			"OpenItemsBonus": 12000000,
+			"OpenItemsAllowance": 17745876.25,
+			"aoutstandingQuote": 12.3
+		}, {
+			"KPI": "Vorperiode",
+			"OpenItemsTotal": 25345876.30,
+			"OpenItemsBonus": 13000000,
+			"OpenItemsAllowance": 15335876.25,
+			"aoutstandingQuote": 13.3
+
+		}]
+	},
+	"ChangeEstimationCC": {
+		"Aktuell": [{
+			"KPI": "Kennzahlen",
+			"ChangeEstimationTotal": 27345876.30,
+			"ChangeEstimationBonus": 10000000,
+			"ChangeEstimationAllowance": 17345876.25
+		
+		}],
+		"Vorjahr": [{
+			"KPI": "Aktuell",
+			"ChangeEstimationTotal": 27345876.30,
+			"ChangeEstimationBonus": 10000000,
+			"ChangeEstimationAllowance": 17345876.25
+		}, {
+			"KPI": "Vorjahr",
+			"ChangeEstimationTotal": 23345876.30,
+			"ChangeEstimationBonus": 12000000,
+			"ChangeEstimationAllowance": 15345876.25
+		}],
+		"Vorperiode": [{
+			"KPI": "Aktuell",
+			"ChangeEstimationTotal": 24345876.30,
+			"ChangeEstimationBonus": 12000000,
+			"ChangeEstimationAllowance": 17745876.25
+		}, {
+			"KPI": "Vorperiode",
+			"ChangeEstimationTotal": 25345876.30,
+			"ChangeEstimationBonus": 13000000,
+			"ChangeEstimationAllowance": 15335876.25
+		}]
+	}
+}

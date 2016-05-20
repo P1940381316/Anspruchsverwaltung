@@ -1,0 +1,47 @@
+<core:FragmentDefinition xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:ui.com="sap.suite.ui.commons" xmlns:fm="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:viz.data="sap.viz.ui5.data"
+	xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds">
+	<Page id="page2" title="No" class="sapUiFioriObjectPage" showHeader="false" showFooter="false">
+		<content>
+			<l:FixFlex id="fixFlexSollstellungen">
+				<l:fixContent>
+					<Panel id="panelSollstellungen" class="panelStyle" headerText="Sollstellungen" expanded="true" width="auto">
+						<HBox class="settingsHBox ">
+							<VBox class="vboxKPI" width="20%">
+								<ObjectIdentifier title="Sollstellungen Total" titleActive="false"/>
+								<ObjectNumber number="{path: '/ChangeEstimationCC/Aktuell/0/ChangeEstimationTotal' , formatter: '.number1formater' }" state="Success"/>
+								<ObjectNumber textAlign="Right" number="12" unit="%"/>
+							</VBox>
+							<VBox width="10px"></VBox>
+							<VBox class="vboxKPI" width="20%">
+								<ObjectIdentifier title="Sollstellungen Prämien" titleActive="false"/>
+								<ObjectNumber class="sapUiSmallMarginBottom"
+									number="{path:'/ChangeEstimationCC/Aktuell/0/ChangeEstimationBonus' , formatter: '.number1formater' }" unit="EURO" state="Success"/>
+								<ObjectNumber textAlign="Right" number="11.3" unit="%"/>
+							</VBox>
+							<VBox width="10px"></VBox>
+							<VBox class="vboxKPI" width="20%">
+								<ObjectIdentifier title="Sollstellungen Nebenforderungen" titleActive="false"/>
+								<ObjectNumber class="sapUiSmallMarginBottom"
+									number="{path:'/ChangeEstimationCC/Aktuell/0/ChangeEstimationAllowance' , formatter: '.number1formater' }" unit="EURO" state="Success"/>
+								<ObjectNumber textAlign="Right" number="9.4" unit="%"/>
+							</VBox>
+						</HBox>
+					</Panel>
+				</l:fixContent>
+				<l:flexContent>
+					<ui.com:ChartContainer id="idChartContainerEstimation" showFullScreen="true" showPersonalization="false" autoAdjustHeight="true"
+						showLegend="true" contentChange="attachContentChange">
+						<ui.com:dimensionSelectors>
+							<Select id="idoSelectEstim" change="handleSelectionChangeEstimation">
+								<core:Item id="itemet0" key="0" text="Aktuell"/>
+								<core:Item id="itemet1" key="1" text="Vorjahr"/>
+								<core:Item id="itemet2" key="2" text="Vorperiode"/>
+							</Select>
+						</ui.com:dimensionSelectors>
+					</ui.com:ChartContainer>
+				</l:flexContent>
+			</l:FixFlex>
+		</content>
+	</Page>
+</core:FragmentDefinition>
